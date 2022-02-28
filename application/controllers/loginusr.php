@@ -5,9 +5,10 @@ class Loginusr extends CI_Controller {
     public function __construct(){
         parent::__construct();
         $this->load->database();
+        $this->load->model('Users');
     }
     
-    function login() {
+    function login(){
         
         session_start();
         
@@ -52,10 +53,39 @@ class Loginusr extends CI_Controller {
                     default:
                 }
             }else{
-                $errorLogin = "Nombre de usuario o contraseña incorrecta";
+                //$errorLogin = "Nombre de usuario o contraseña incorrecta";
+                echo "<script> alert('Usuario o contraseñas incorrectas'); window.location='../login' </script>";
             }
-            
+        }
+    }
 
+    function register(){
+        $nombre = $_POST["username"];
+        $pass   = $_POST["password"];
+        $typeUser = $_POST["typeUs"];
+        $Flag_sel = TRUE;
+        if($typeUser=='Administrador'){
+            $idTipoUsu=1;
+        }else if($typeUser=='Alumno'){
+            $idTipoUsu=2;
+        }else if($typeUser=='Maestro'){
+            $idTipoUsu=3;
+        }else{
+            echo "<script> alert('No selecciono el tipo de cuenta'); window.location='../register' </script>";
+            $Flag_sel=FALSE;
+        }
+
+        if($Flag_sel==TRUE){
+                $data = array(
+                    'nombreusuario'	=> $nombre,
+                    'contraseniausuario'	=> $pass,
+                    'IdTipoUsuario' => $idTipoUsu,
+                );
+
+                if(!$this->Users->create($data)){
+                    echo "<script> alert('Usuario o contraseñas incorrectas'); window.location='../login' </script>";
+                }
+            echo "<script> alert('Registrado corectamente'); window.location='../login' </script>";
         }
     }
 }

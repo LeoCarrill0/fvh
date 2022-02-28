@@ -96,6 +96,8 @@ $db['default'] = array(
 	'save_queries' => TRUE
 );
 
+
+
 class Database{
 
     private $host;
@@ -111,7 +113,7 @@ class Database{
         $this->password = '';
         $this->charset = 'utf8mb4';
     }
-
+    
     function connect(){
         try{
             $connection = "mysql:host=" . $this->host . ";dbname=" . $this->db . ";charset=" . $this->charset;
@@ -128,4 +130,21 @@ class Database{
         }
     }
 
+}
+
+class Connection{
+    private $dbhost = "localhost";
+    private $dbuser = "root";
+    private $dbpass = "";
+    private $dbname = "fvh";
+
+    function connect() {
+        
+        $conn = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
+
+        if(!$conn)
+        {
+            die("No hay conexion:" .mysqli_connect_error());
+        }
+    }
 }

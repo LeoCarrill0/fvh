@@ -55,7 +55,7 @@
                     </li>
 
                     <li class="nav-link">
-                        <a href="#">
+                        <a href="<?= base_url();?>index.php/login">
                             <i class='bx bx-group icon'></i>
                             <span class="text nav-text">Inscripciones</span>
                         </a>
@@ -76,7 +76,7 @@
                     </li>
 
                     <li class="nav-link">
-                        <a href="#">
+                        <a href="<?= base_url();?>index.php/login">
                             <i class='bx bx-user-pin icon' ></i>
                             <span class="text nav-text">Alumnos</span>
                         </a>

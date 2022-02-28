@@ -15,6 +15,10 @@ class Dashboard extends CI_Controller {
 	{
 		$this->load->view('logcodigo/loginuser');
 	}
+	public function register()
+	{
+		$this->load->view('logcodigo/register');
+	}
 
 	public function index()
 	{

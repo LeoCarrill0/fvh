@@ -63,6 +63,13 @@
                     </li>
 
                     <li class="nav-link">
+                        <a href="<?= base_url();?>index.php/register">
+                            <i class='bx bx-user-plus icon' ></i>
+                            <span class="text nav-text">Registrar usuario</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
                         <a href="#">
                             <i class='bx bx-stats icon' ></i>
                             <span class="text nav-text">Control de Notas</span>
