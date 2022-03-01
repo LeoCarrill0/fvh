@@ -46,28 +46,7 @@
                             <span class="text nav-text">Pagos</span>
                         </a>
                     </li>
-
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bx-stats icon' ></i>
-                            <span class="text nav-text">Control de Notas</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="<?= base_url();?>index.php/login">
-                            <i class='bx bx-group icon'></i>
-                            <span class="text nav-text">Inscripciones</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bx-id-card icon' ></i>
-                            <span class="text nav-text">Empleados</span>
-                        </a>
-                    </li>
-
+                    
                     <li class="nav-link">
                         <a href="#">
                             <i class='bx bx-bowl-hot icon' ></i>
@@ -77,9 +56,9 @@
 
                     <li class="nav-link">
                         <a href="<?= base_url();?>index.php/login">
-                            <i class='bx bx-user-pin icon' ></i>
-                            <span class="text nav-text">Alumnos</span>
-                        </a>
+                            <i class='bx bx-log-in icon' ></i>
+                                <span class="text nav-text">Ingresar</span>
+                            </a>
                     </li>
 
                 </ul>
